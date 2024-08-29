@@ -1,38 +1,359 @@
-.App {
-  text-align: center;
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", "sans-serif";
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+body {
+    background-image: url("./login-bg.jpg");
+    background-attachment: fixed;
+    background-size: cover;
+
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.login-container {
+    background-image: url("./login-bg.jpg");
+    background-attachment: fixed;
+    background-size: cover;
+    height: 100vh;
+    width: 100vw;
+    font-family: "Poppins", "sans-serif";
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.login-head {
+    font-size: 40px;
+    font-weight: 800;
+    margin-bottom: 70px;
+    margin-top: 30px;
 }
 
-.App-link {
-  color: #61dafb;
+.form-container {
+    background: rgba(255, 255, 255, 0.495);
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(10px);
+    height: 550px;
+    width: 400px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+input {
+    width: 70%;
+    height: 50px;
+    border-radius: 18px;
+    border: none;
+    margin-bottom: 50px;
+    padding-left: 30px;
+    font-size: 15px;
 }
+
+.login-btn {
+    width: 120px;
+    height: 40px;
+    border: none;
+    border-radius: 10px;
+    font-size: 15px;
+    background-color: white;
+}
+
+.login-btn:hover {
+    background-color: #ffffff97;
+}
+
+.error-message {
+    color: red;
+    margin-bottom: 10px;
+}
+
+/* Home */
+
+.home-container {
+    position: fixed;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+    flex-direction: row;
+    height: 80px;
+    width: 100%;
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    z-index: +1;
+
+}
+
+.home-welcome {
+    margin-left: 40px;
+    font-size: 40px;
+    font-weight: 700;
+    text-align: center;
+    color: rgb(255, 77, 139);
+    cursor: default;
+}
+
+.logout {
+    margin-right: 40px;
+    width: 90px;
+    height: 35px;
+    border: none;
+    border-radius: 10px;
+    font-size: 15px;
+    background-color: rgb(255, 126, 188);
+    color: rgb(0, 0, 0);
+}
+
+.logout:hover {
+    background-color: rgba(255, 126, 188, 0.694);
+}
+
+/* Bucket List */
+
+.bucket-container {
+    padding-top: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.bucket-head {
+    font-size: 40px;
+    font-weight: 700;
+    margin-bottom: 30px;
+    color: rgb(255, 98, 153);
+}
+
+.empty-message {
+    background: rgba(255, 156, 211, 0.495);
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(10px);
+    width: 70vw;
+    height: 70vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-size: 20px;
+}
+
+.list-tile {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: row;
+    background: rgba(255, 156, 211, 0.495);
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(10px);
+    width: 630px;
+    height: 150px;
+    margin-bottom: 50px;
+
+}
+
+.section-left{
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    margin-left: 30px;
+}
+
+.section-right {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    margin-right: 30px;
+}
+
+.title{
+    font-size: 20px;
+    font-weight: 500;
+}
+
+.completed {
+    color: #373737;
+}
+
+.status {
+    width: 60px;
+    height: 30px;
+    border-radius: 5px;
+    background-color: rgb(255, 96, 175);
+    border: none;
+}
+
+.status:hover {
+    background-color: rgba(255, 138, 196, 0.312);;
+}
+
+.bucket-img {
+    width: 20px;
+}
+
+.add-main {
+    position: fixed;
+    bottom: 40px;
+    right: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 35px;
+    background-color: rgb(255, 126, 188);
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    box-shadow: -3px 3px 30px rgba(0, 0, 0, 0.375);
+    border: none;
+}
+
+.modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(5px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.modal-content {
+    background: rgba(255, 156, 211, 0.495);
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(10px);
+    width: 600px;
+    height: 500px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.buttons{
+    margin-top: 20px;
+    display: flex;
+    gap: 2rem;
+}
+
+.add, .close {
+    width: 70px;
+    height: 35px;
+    border-radius: 5px;
+    border: none;
+    background: rgba(255, 194, 227, 0.619)
+}
+
+.add:hover, .close:hover {
+    background-color: rgba(255, 255, 255, 0.666);
+}
+
+textarea {
+    width: 80%;
+    height: 50%;
+    border: none;
+    border-radius: 5px;
+    padding: 20px;
+    font-size: 15px;
+    background: rgba(255, 194, 227, 0.619);
+}
+
+textarea::placeholder {
+    color: rgb(0, 0, 0);
+}
+
+textarea:focus{
+    outline: none;
+}
+
+@media screen and (max-width: 800px) {
+    .home-welcome {
+        font-size: 35px;
+    }
+
+    .list-tile {
+        width: 90%;
+    }
+
+    .modal-content {
+        width: 90%;
+    }
+
+
+}
+
+@media screen and (max-width: 600px) {
+    .home-welcome {
+        font-size: 30px;
+        margin-left: 15px;
+    }
+
+    .bucket-head {
+        font-size: 30px;
+    }
+
+    .logout {
+        width: 80px;
+        height: 33px;
+        margin-right: 15px;
+    }
+
+    .add-main {
+        right: 15px;
+        bottom: 20px;
+    }
+
+    .title {
+        font-size: 15px;
+    }
+
+    .completed {
+        font-size: 12px;
+    }
+
+    .empty-message {
+        font-size: 15px;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .form-container {
+        width: 85%;
+        height: 70%;
+    }
+
+    .bucket-img {
+        width: 18px;
+    }
+
+    .add, .close, .status {
+        width: 50px;
+        height: 32px;
+    }
+
+    .home-welcome, .bucket-head {
+        font-size: 25px;
+    }
+}
+
+
+
