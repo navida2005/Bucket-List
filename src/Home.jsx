@@ -10,19 +10,19 @@ const Home = () => {
   const navigate = useNavigate();
 
   const getName = (email) => {
-    if(email === "navidawimalaweera@gmail.com") {
-        return "Navida";
-    } else if (email === "hirunimelissa2005@gmail.com") {
-        return "Choootiii";
+    if (email === process.env.REACT_APP_PERSON1_EMAIL) {
+        return process.env.REACT_APP_PERSON1_NAME;
+    } else if (email === process.env.REACT_APP_PERSON2_EMAIL) {
+        return process.env.REACT_APP_PERSON2_NAME;
     }
-};
+  };
 
   useEffect(() => {
     const unsubscribe = auth.onAuthStateChanged((user) => {
       if (user) {
         setUser(user);
       } else {
-        navigate("/login"); 
+        navigate("/login");
       }
     });
 
@@ -31,11 +31,11 @@ const Home = () => {
 
   return (
     <>
-        <div className="home-container">
-            {user && <div className="home-welcome">Hello {getName(user.email)}!!</div>}
-            <button className="logout" onClick={() => auth.signOut()}>Log Out</button>
-        </div>
-        <BucketList />
+      <div className="home-container">
+        {user && <div className="home-welcome">Hello {getName(user.email)}!!</div>}
+        <button className="logout" onClick={() => auth.signOut()}>Log Out</button>
+      </div>
+      <BucketList />
     </>
   );
 };
