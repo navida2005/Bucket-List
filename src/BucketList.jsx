@@ -69,7 +69,7 @@ const BucketList = () => {
                     <div key={bucketItem.id} className="list-tile">
                         <div className="section-left">
                             <div className="title">{bucketItem.item}</div>
-                            <div className="completed">{bucketItem.completed ? "We Did It!!!" : "Not Yet Done"}</div>
+                            <div className="completed">{bucketItem.completed ? "✅ We Did It!!!" : "🥺 Not Yet Done"}</div>
                         </div>
                         <div className="section-right">
                             <button className="status" onClick={() => toggleComplete(bucketItem.id, bucketItem.completed)}>

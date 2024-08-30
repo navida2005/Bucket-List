@@ -12,7 +12,6 @@ body {
     background-image: url("./login-bg.jpg");
     background-attachment: fixed;
     background-size: cover;
-
 }
 
 .login-container {
@@ -55,8 +54,12 @@ input {
     border-radius: 18px;
     border: none;
     margin-bottom: 50px;
-    padding-left: 30px;
+    padding-left: 10px;
     font-size: 15px;
+}
+
+input:focus {
+    outline: none;
 }
 
 .login-btn {
@@ -223,6 +226,7 @@ input {
 }
 
 .modal {
+    z-index: +1;
     position: fixed;
     top: 0;
     left: 0;
@@ -339,6 +343,10 @@ textarea:focus{
     .form-container {
         width: 85%;
         height: 70%;
+    }
+
+    .list-tile {
+        margin-bottom: 20px;
     }
 
     .bucket-img {
