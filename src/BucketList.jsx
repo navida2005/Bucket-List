@@ -35,6 +35,10 @@ const BucketList = () => {
     };
 
     const addBucket = async () => {
+        if (!newListItem) {
+            setIsModalOpen(false);
+            return;
+        }
         await addDoc(collection(db, "bucketlist"), {
             item: newListItem,
             completed: false,
@@ -69,11 +73,11 @@ const BucketList = () => {
                     <div key={bucketItem.id} className="list-tile">
                         <div className="section-left">
                             <div className="title">{bucketItem.item}</div>
-                            <div className="completed">{bucketItem.completed ? "✅ We Did It!!!" : "🥺 Not Yet Done"}</div>
+                            <div className="completed">{bucketItem.completed ? "High five, partner in crime!  💕" : "Can't wait to do this together! 🥰"}</div>
                         </div>
                         <div className="section-right">
                             <button className="status" onClick={() => toggleComplete(bucketItem.id, bucketItem.completed)}>
-                                {bucketItem.completed ? "Revert" : "Done"}
+                                {bucketItem.completed ? "Undo" : "Yay!"}
                             </button>
                             <img src={bin} onClick={() => deleteBucketItem(bucketItem.id)} alt="bucket" className="bucket-img" />
                         </div>

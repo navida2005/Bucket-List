@@ -3,6 +3,7 @@ import React, { useEffect, useState } from "react";
 import { auth } from "./firebase_config";
 import { useNavigate } from "react-router-dom";
 import BucketList from "./BucketList";
+import Message from "./Message";
 import "./App.css";
 
 const Home = () => {
@@ -35,9 +36,11 @@ const Home = () => {
         {user && <div className="home-welcome">Hello {getName(user.email)}!!</div>}
         <button className="logout" onClick={() => auth.signOut()}>Log Out</button>
       </div>
+      <Message />
       <BucketList />
     </>
   );
 };
+
 
 export default Home;
