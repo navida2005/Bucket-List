@@ -163,6 +163,7 @@ input:focus {
     text-align: center;
     font-size: 20px;
     margin-bottom: 30px;
+    padding: 20px;
 }
 
 .list-tile, .message-tile, .message-input textarea {
