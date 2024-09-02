@@ -130,6 +130,18 @@ input:focus {
     background-color: rgba(255, 126, 188, 0.694);
 }
 
+.footer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-bottom: 20px;
+}
+
+.footer p {
+    text-align: center;
+    color: #373737;
+}
+
 /* Bucket List */
 
 .bucket-container {
@@ -425,6 +437,10 @@ textarea {
 
     .empty-message {
         font-size: 15px;
+    }
+
+    .footer p {
+        font-size: 10px;
     }
 }
 

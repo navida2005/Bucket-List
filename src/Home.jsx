@@ -38,6 +38,9 @@ const Home = () => {
       </div>
       <Message />
       <BucketList />
+      <div className="footer">
+        <p>Copyright&copy; 2024, Designed By Navida Wimalaweera</p>
+      </div>
     </>
   );
 };
