@@ -131,10 +131,12 @@ input:focus {
 }
 
 .footer {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding-bottom: 20px;
+    z-index: -1;
+    width: 100%;
+    text-align: center;
+    padding-bottom: 10px;
+    top: 20px;
+    position: relative;
 }
 
 .footer p {
